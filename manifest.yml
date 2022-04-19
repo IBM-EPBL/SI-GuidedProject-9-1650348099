@@ -1,0 +1,7 @@
+---
+applications:
+- memory: 128M 
+  disk: 256M
+  instances: 1
+  name: plasma-donor
+  random-route: true
