@@ -21,5 +21,5 @@ jobs:
         pip install -r $(git ls-files 'requirements.txt')
     - name: Analysing the code with pylint
       run: |
-        pylint $(git ls-files '*.py'  --exit-zero)
+        pylint $(git ls-files '*.py')
         echo "Hello World"
