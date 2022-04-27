@@ -22,7 +22,15 @@ jobs:
     - name: Analysing the code with pylint
       run: |
         echo "Hello World"
-        echo "data=$(pylint $(git ls-files '*.py'))"
+        echo "data=$(pylint $(git ls-files '*.py'))" >> $GITHUB_ENV
+    
+    - name: Step To run on failure
+      if: ${{ success() }}
+      run: |
+        echo "Sucess"
+        echo "REPO_NAME=$(basename ${{ github.repository }})"
+        echo "${{ env.data}}"
+        
     - name: Step To run on failure
       if: ${{ failure() }}
       run: |
