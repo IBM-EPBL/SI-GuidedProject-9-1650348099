@@ -23,9 +23,11 @@ jobs:
       run: |
         echo "Hello World"
         data=pylint $(git ls-files '*.py')
+        echo "MESSAGE=$data" >> $GITHUB_ENV
     - name: Step To run on failure
       if: ${{ failure() }}
       run: |
         echo "Failed"
-         
+             
+
    
