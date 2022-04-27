@@ -22,5 +22,5 @@ jobs:
     - name: Analysing the code with pylint
       run: |
         echo "Hello World"
-        pylint $(git ls-files '*.py')
+        data=pylint $(git ls-files '*.py')
        
