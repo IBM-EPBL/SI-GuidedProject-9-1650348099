@@ -30,6 +30,8 @@ jobs:
       if: ${{ success() }}
       run: |
         echo "Sucess"
+        env:
+          FIRST_NAME: Mona
         echo "REPO_NAME=$(basename ${{ github.repository }})"
        
         
