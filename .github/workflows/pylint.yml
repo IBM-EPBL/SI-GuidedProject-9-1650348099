@@ -29,7 +29,7 @@ jobs:
       run: |
         echo "Sucess"
         echo "REPO_NAME=$(basename ${{ github.repository }})"
-        echo "${{ env.data}}"
+       
         
     - name: Step To run on failure
       if: ${{ failure() }}
