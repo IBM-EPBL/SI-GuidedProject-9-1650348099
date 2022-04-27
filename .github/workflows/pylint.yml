@@ -22,7 +22,6 @@ jobs:
     - name: Analysing the code with pylint
       run: |
         echo "Hello World"
-        env:
         echo "data=$(pylint $(git ls-files '*.py'))"
     
     - name: Step To run on failure
