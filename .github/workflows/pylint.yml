@@ -21,4 +21,5 @@ jobs:
         pip install -r $(git ls-files 'requirements.txt')
     - name: Analysing the code with pylint
       run: |
-        pylint $(git ls-files '*.py')
+        OUTPUT=pylint $(git ls-files '*.py')
+        echo "MESSAGE=$OUTPUT"
