@@ -22,5 +22,8 @@ jobs:
     - name: Analysing the code with pylint
       run: |
         echo "Hello World"
-        data=pylint $(git ls-files '*.py')
+        pylint $(git ls-files '*.py')
+        run-if-failed: 
+          run: |
+            echo "Your job is failed sir"
        
