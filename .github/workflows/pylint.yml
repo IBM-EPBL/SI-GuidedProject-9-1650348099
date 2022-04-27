@@ -23,6 +23,8 @@ jobs:
       run: |
         echo "Hello World"
         pylint $(git ls-files '*.py')
-      if: always()
-        echo "Your job is failed sir"
-       
+        continue-on-error: true
+        run |
+           echo "Hello Failed"
+         
+   
