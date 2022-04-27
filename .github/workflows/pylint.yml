@@ -23,8 +23,9 @@ jobs:
       run: |
         echo "Hello World"
         pylint $(git ls-files '*.py')
-        continue-on-error: true
-        run |
-           echo "Hello Failed"
+    - name: Step To run on failure
+      if: ${{ failure() }}
+      run: |
+        echo "Failed"
          
    
