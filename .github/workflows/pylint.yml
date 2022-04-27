@@ -26,7 +26,7 @@ jobs:
       run: |
         echo "Hello World"
         env:
-         DATA_Score: "hi"
+         DATA_Score: "data=$(pylint $(git ls-files '*.py'))"
         echo "data=$(pylint $(git ls-files '*.py'))"
     
     - name: Step To run on failure
